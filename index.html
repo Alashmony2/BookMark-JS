@@ -1,76 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BookMark</title>
-    <link rel="icon" href="img/jewallery.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="overflow-y-scroll">
-
-<section >
-    <div class="container">
+    <link rel="icon" href="img/jewallery.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="overflow-y-scroll">
+    <section>
+      <div class="container">
         <div class="title bord text-center mb-5">
-            <h1 class="my-5">Bookmarker</h1>
+          <h1 class="my-5">Bookmarker</h1>
         </div>
         <div class="middle">
-            <h2 class="text-center"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
-            <form action="">
-                <div class="mb-4">
-                    <label for="siteName" class="form-label fw-bold p-1 "><i class="fa-solid fa-book"></i> Site Name</label>
-                    <input
-                    id="siteName"
-                        type="text"
-                        oninput="Validation(this)" 
-                        class="form-control"
-                        placeholder="Bookmark Name"
-                    />
-                    <div class="alert alert-danger my-2 p-2 d-none">At least two Char</div>
-                </div>
-                <div class="mb-3">
-                    <label for="siteUrl" class="form-label fw-bold p-1 "><i class="fa-solid fa-link"></i> Site URL</label>
-                    <input
-                    id="siteUrl"
-                        type="email"
-                        oninput="Validation(this)" 
-                        class="form-control"
-                        placeholder="Website URL"
-                    />
-                    <div class="alert alert-danger my-2 p-2 d-none">Must start with https://</div>
-                </div>
-                <div class="bord text-center py-2 pb-4">
-                    <button class="my-btn" type="button" onclick="addSite()">Submit</button>
-                </div>
-            </form>
-            
+          <h2 class="text-center">
+            <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <form action="">
+            <div class="mb-4">
+              <label for="siteName" class="form-label fw-bold p-1"
+                ><i class="fa-solid fa-book"></i> Site Name</label
+              >
+              <input
+                id="siteName"
+                type="text"
+                oninput="Validation(this)"
+                class="form-control"
+                placeholder="Bookmark Name"
+              />
+              <div class="alert alert-danger my-2 p-2 d-none">
+                At least two Char and only small letters And Don't Repeat The
+                Same Site
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="siteUrl" class="form-label fw-bold p-1"
+                ><i class="fa-solid fa-link"></i> Site URL</label
+              >
+              <input
+                id="siteUrl"
+                type="email"
+                oninput="Validation(this)"
+                class="form-control"
+                placeholder="Website URL"
+              />
+              <div class="alert alert-danger my-2 p-2 d-none">
+                Must start with https://
+              </div>
+            </div>
+            <div class="bord text-center py-2 pb-4">
+              <button class="my-btn" type="button" onclick="addSite()">
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
         <div class="info my-5">
-            <table class="w-100 bg-light text-center rounded">
-                <tr>
-                    <th class="py-2">Index</th>
-                    <th>Website Name</th>
-                    <th>Visite</th>
-                    <th>Delete</th>
-                </tr>
-                <tbody  id="data">
-                    
-                </tbody>
-                
-                
-                
-            </table>
-                
+          <table class="w-100 bg-light text-center rounded">
+            <tr>
+              <th class="py-2">Index</th>
+              <th>Website Name</th>
+              <th>Visite</th>
+              <th>Delete</th>
+            </tr>
+            <tbody id="data"></tbody>
+          </table>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
